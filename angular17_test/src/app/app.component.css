@@ -1,0 +1,128 @@
+.background {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-image: url('/assets/pokedex.png');
+  background-size: cover;  /* Make the image cover the whole screen */
+  background-repeat: no-repeat;
+  background-position: 10% center;  /* Center the image */
+  z-index: -1;  /* Keep it behind the content */
+}
+/* Global font and text color */
+body {
+  font-family: 'Press Start 2P', cursive; /* Set the pixelated font */
+  background-color: #00ff62; /* Optional: dark background */
+  color: #6200ff; /* White text color */
+}
+  .pokemon-container {
+    position: relative;
+    z-index: 1; /* Ensures the container's content stays on top of the background */
+    text-align: center; /* Centers the content */
+    padding: 20px;
+    color: #d9ff00;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: -950px; 
+    margin-top: -50px ;
+  }
+/* Animation for the Pokémon image */
+.pokemon-info img {
+  opacity: 0;  /* Start with the image hidden */
+  transform: scale(0.8);  /* Start with the image scaled down */
+  animation: fadeInScaleUp 1s forwards;  /* Apply the animation */
+}
+
+/* Keyframes for the fade-in and scale-up animation */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;  /* Invisible at the start */
+    transform: scale(0.8);  /* Start smaller */
+  }
+  50% {
+    opacity: 0.5;  /* Fade in partially */
+    transform: scale(1.1);  /* Scale up slightly */
+  }
+  100% {
+    opacity: 1;  /* Fully visible */
+    transform: scale(1);  /* Normal size */
+  }
+}
+
+/* Additional hover effect on the*
+
+  
+  .image-toggle-button {
+    margin-top: -290px;
+
+  }
+  /* Styling for the toggle image button */
+.image-toggle-button {
+  padding: 15px 30px;  /* Increase padding to make the button bigger */
+  font-size: 20px;  /* Increase font size */
+  background-color: rgba(255, 87, 34, 0.7);  /* Set a unique background color */
+  border: none;  /* Remove border */
+  color: white;  /* Set text color to white */
+  border-radius: 12px;  /* Round the corners */
+  cursor: pointer;  /* Show pointer on hover */
+  transition: all 0.3s ease;  /* Smooth transition on hover */
+  margin-top: 20px;  /* Space above the button */
+}
+
+/* Hover effect for the toggle image button */
+.image-toggle-button:hover {
+  background-color: rgba(255, 87, 34, 1);  /* Change background color on hover */
+  transform: scale(1.1);  /* Slightly enlarge the button on hover */
+}
+
+/* Optional: Focus effect for the toggle image button */
+.image-toggle-button:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.5);  /* Add a focus outline */
+}
+
+/* Styling for the navigation buttons container */
+.nav-buttons {
+  display: flex;
+  justify-content: center;  /* Center the buttons horizontally */
+  gap: 20px;  /* Space between the buttons */
+  margin-top: 30px;  /* Space above the buttons */
+}
+
+/* Styling for the individual navigation buttons */
+.nav-button {
+  padding: 15px 30px;  /* Increase padding to make buttons bigger */
+  font-size: 18px;  /* Increase font size */
+  background-color: rgba(0, 150, 136, 0.7);  /* Set the background color */
+  border: none;  /* Remove the border */
+  color: white;  /* Set text color to white */
+  border-radius: 12px;  /* Round the corners */
+  cursor: pointer;  /* Show a pointer on hover */
+  transition: all 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Hover effect for buttons */
+.nav-button:hover {
+  background-color: rgba(0, 150, 136, 1);  /* Change background color on hover */
+  transform: scale(1.1);  /* Slightly enlarge the button on hover */
+}
+
+/* Optional: Focus effect for buttons when clicked */
+.nav-button:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.5);  /* Add a focus outline */
+}
+
+  
+  /* Add responsiveness for better scaling */
+  @media (max-width: 600px) {
+    .pokemon-container {
+      padding: 10px;
+    }
+  
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }

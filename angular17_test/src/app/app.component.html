@@ -1,0 +1,28 @@
+<div class="background"></div>
+<div class="pokemon-container">
+  <!-- app.component.html -->
+  <h1>Angular Pokémon Viewer</h1>
+
+  <!-- Display current Pokémon details -->
+
+  <div class="pokemon-info">
+    <h2>{{ currentPokemon.name }}</h2>
+    
+    <!-- Middle button to toggle image visibility -->
+    <button class="image-toggle-button" (click)="toggleImageVisibility()">Toggle Image</button>
+
+    <!-- Display the Pokémon image if isImageVisible is true -->
+    <div *ngIf="isImageVisible">
+      <img 
+        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (currentPokemonIndex+1) + '.png'"
+        width="250" height="250">
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="nav-buttons">
+    <button class="nav-button" (click)="goToPreviousPokemon()">Previous</button>
+    <button class="nav-button" (click)="goToNextPokemon()">Next</button>
+  </div>
+</div>
+
